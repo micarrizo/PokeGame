@@ -1,5 +1,7 @@
 **This is the Pokemon Game made with React Hooks and Redux**
 
+This game was made with the [Pokemon API](www.pokeapi.co)
+
 Once you download this project, you just to run these command lines.
 
 to install node_modules
