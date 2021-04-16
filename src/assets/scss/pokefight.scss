@@ -1,0 +1,269 @@
+
+.pokenewfight_card {
+    padding: 1em;
+    background-color: white;
+    border-radius: 8px;
+    &.center {
+        position: fixed; /* or absolute */
+        top: 20%;
+        left: 35%;
+        margin-top: -50px;
+        margin-left: -100px;
+    }
+    &:hover {
+        box-shadow: 0px 2px 8px 0px rgba(173, 185, 204, 0.5);
+    }
+
+    $dash-size: 5px;
+    $theme-color: mediumseagreen;
+    $fill-color: beige;
+
+    &.box {
+        padding: 60px;
+        max-width: 800px;
+        background: lighten($theme-color, 20%);
+        border: $dash-size dashed $theme-color;
+        box-shadow: 0 0 0 ($dash-size / 2) darken($theme-color, 20%), 0 0 0 ($dash-size * 2.5) #fff,
+            inset 0 0 0 ($dash-size / 2) darken($theme-color, 20%),
+            0 $dash-size ($dash-size * 2) ($dash-size * 3) rgba(0, 0, 0, 0.5), inset 0 0 0 ($dash-size * 1.2) #fff,
+            inset 0 0 100vw 100vw $fill-color;
+        color: $theme-color;
+        font-family: Marcellus, serif;
+        font-size: 3em;
+        text-shadow: 0 2px #fff;
+        text-align: center;
+    }
+}
+
+.pokenewfight_card-title {
+    margin-top: 0em;
+    font-size: 0.7em;
+    margin-bottom: 1.5em;
+}
+
+.pokenewfight_card-options {
+    gap: 22px;
+    color: mediumseagreen;
+    margin-bottom: 1em;
+}
+
+.pokenewfight_card-button {
+    text-decoration: none;
+    font-size: 0.6em;
+    color: #333;
+
+}
+
+.fight {
+    margin: 1.5em 0;
+    font-size: 0.7em;
+    display: block;
+}
+
+.span-text {
+    font-size: 0.6em;
+}
+
+.pokenewfight-back {
+    font-size: 0.7em;
+    color: mediumseagreen;
+    
+}
+
+.pokenewfight_card-label {
+    font-size: 0.5em;
+}
+
+
+
+.pokefight_card {
+    padding: 1em;
+    border-radius: 8px;
+    height: 800px;
+    width: 1000px;
+    &.center {
+        position: fixed; /* or absolute */
+        top: 20%;
+        left: 35%;
+        margin-top: -100px;
+        margin-left: -180px;
+    }
+    &:hover {
+        box-shadow: 0px 2px 8px 0px rgba(173, 185, 204, 0.5);
+    }
+
+    $dash-size: 5px;
+    $theme-color: mediumseagreen;
+    $fill-color: beige;
+
+    &.box {
+        padding: 20px;
+        max-width: 1000px;
+        background: lighten($theme-color, 20%);
+        border: $dash-size dashed $theme-color;
+        box-shadow: 0 0 0 ($dash-size / 2) darken($theme-color, 20%), 0 0 0 ($dash-size * 2.5) #fff,
+            inset 0 0 0 ($dash-size / 2) darken($theme-color, 20%),
+            0 $dash-size ($dash-size * 2) ($dash-size * 3) rgba(0, 0, 0, 0.5), inset 0 0 0 ($dash-size * 1.2) #fff,
+            inset 0 0 100vw 100vw $fill-color;
+        color: $theme-color;
+        font-family: Marcellus, serif;
+        font-size: 3em;
+        text-shadow: 0 2px #fff;
+        text-align: center;
+    }
+}
+
+.gameFight-container {
+    position: relative;
+    height: 70%;
+    overflow: hidden;
+    .stats {
+        padding: 18px;
+        position: absolute;
+        max-width: 50%;
+        min-width: 40%;
+        border: 5px solid #495e4e;
+        background-color: #f5f3db;
+        border-radius: 32px 8px 32px 8px;
+        color: #495e4e;
+        .health {
+            position: relative;
+            &:after {
+                position: absolute;
+                content: '';
+                display: block;
+                height: 48px;
+                width: 120%;
+                z-index: -1;
+                background-color: #495e4e;
+                clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 0% 100%);
+                transform: translateY(-10px);
+                border-bottom-left-radius: 50px;
+            }
+        }
+        .health-status, h3 {
+            text-transform: uppercase;
+            font-size: 20px;
+            margin: 0.5em 0;
+        }
+        h3 {
+            text-align: left;
+        }
+        .health-status {
+            text-align: right;
+        }
+        .health-bar {
+            height: 18px;
+            border: 3px solid #495e4e;
+            border-radius: 9px;
+            .fill {
+                display: block;
+                height: 12px;
+                min-width: 0%;
+                max-width: 100%;
+                background-color: #5eac70;
+            }
+        }
+    }
+    .pokemon {
+        position: absolute;
+        img {
+            width: 450px;
+        }
+    }
+    .player1 {
+        bottom: .5em;
+        right: .5em;
+        .health:after {
+            transform: rotateY(180deg) translateX(75px) translateY(-10px)
+        }
+        &.pokemon {
+            left: .5em;
+            right: auto;
+            bottom: -3.5em;
+        }
+    }
+    .player2 {
+        top: .5em;
+        left: .5em;
+        &.pokemon {
+            right: .5em;
+            left: auto;
+            top: -1em;
+            &:after {
+                content: '';
+                display: block;
+                width: 350px;
+                height: 42px;
+                border-radius: 50%;
+                background-color: #495e4e;
+                filter: blur(6px);
+                margin-top: -60px;
+                margin-left: 10px;
+            }
+            img {
+                width: 350px;
+            }
+        }
+    }
+}
+
+.text_banner {
+    // position: relative; 
+    height: 30%;
+    width: 100%;
+    background-color: #2f3b31f5;
+    padding: 8px;
+}
+
+.text_banner-border {
+    height: 100%;
+    width: 100%;
+    background-color: #c04e33;
+    border-radius: 30px;
+}
+
+.text_banner-content {
+    height: 95%;
+    width: 95%;
+    background-color: #588286;
+    border-radius: 15px; 
+    padding: 20px;  
+}
+
+.fight-text {
+    text-align: left;
+    font-size: 30px;
+    color: white;
+    p {
+        margin-bottom: .3em;
+    }
+}
+
+.moves-container {
+    display: flex;
+    flex-basis: 50%;
+    flex-wrap: wrap;
+    div {
+        position: relative;
+        width: 50%;
+        text-align: center;
+        padding: 16px; 
+        text-transform: lowercase;
+        font-size: 30px;
+        &:hover:after {
+            position: absolute;
+            top: 18px;
+            left: 0;
+            content: '';
+            width: 30px;
+            height: 30px;
+            display: block;
+            clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+            background-color: white;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

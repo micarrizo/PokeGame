@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+body {
+    background-image: url(../img/home.jpeg);
+}
+
+
+
+.pokehome_card {
+    padding: 1em;
+    background-color: white;
+    border-radius: 8px;
+    // height: 20%;
+    // width: 20%;
+    &.center {
+        position: fixed; /* or absolute */
+        top: 20%;
+        left: 40%;
+        margin-top: -50px;
+        margin-left: -100px;
+    }
+    &:hover {
+        box-shadow: 0px 2px 8px 0px rgba(173, 185, 204, 0.5);
+    }
+
+    $dash-size: 5px;
+    $theme-color: mediumseagreen;
+    $fill-color: beige;
+
+    &.box {
+        padding: 60px;
+        max-width: 650px;
+        background: lighten($theme-color, 20%);
+        border: $dash-size dashed $theme-color;
+        box-shadow: 0 0 0 ($dash-size / 2) darken($theme-color, 20%), 0 0 0 ($dash-size * 2.5) #fff,
+            inset 0 0 0 ($dash-size / 2) darken($theme-color, 20%),
+            0 $dash-size ($dash-size * 2) ($dash-size * 3) rgba(0, 0, 0, 0.5), inset 0 0 0 ($dash-size * 1.2) #fff,
+            inset 0 0 100vw 100vw $fill-color;
+        color: $theme-color;
+        font-family: Marcellus, serif;
+        font-size: 3em;
+        text-shadow: 0 2px #fff;
+        text-align: center;
+    }
+}
+
+.pokehome_card-title {
+    margin-top: 0.3em;
+    font-size: 1em;
+    line-height: 1.3;
+}
+
+.pokehome_card-options {
+    margin-top: 1em;
+    gap: 22px;
+    color: mediumseagreen;
+}
+
+.pokehome_card-button {
+    text-decoration: none;
+    color: black;
+}

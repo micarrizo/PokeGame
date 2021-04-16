@@ -1,0 +1,135 @@
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 12px;
+}
+
+.retro-text {
+    font-family: "Press Start 2P", cursive;
+}
+
+.card {
+    // border: 1px solid rgb(173, 185, 204);
+    padding: 1em;
+    background-color: white;
+    border-radius: 8px;
+    &.pokemon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    &:hover {
+        box-shadow: 0px 2px 8px 0px rgba(74, 221, 94, 0.5);
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(23, 34, 51, 0.8);
+    backdrop-filter: blur(3px);
+    z-index: 999;
+}
+
+.appear-top {
+    transform: translateY(-100%);
+    animation: appear-top .5s linear forwards;
+}
+
+@keyframes appear-top{
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+.pokemon-grid {
+    display: grid;
+    margin-top: 1em;
+    grid-template-columns: repeat(8,129px);
+    gap: 12px;
+}
+
+.row {
+    display: flex;
+    .col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        h4 {
+            margin-bottom: .5em;
+        }
+        h2 {
+            margin-bottom: 1em;
+        }
+    }
+    .col-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-vertical {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.full-width {
+    width: 80%;
+}
+
+.stat {
+    padding: .5em 0;
+    &:nth-child(odd){
+        background-color: rgb(238, 241, 245);
+    }
+}
+
+.pokedex-title {
+    margin-top: 0.3em;
+    margin-bottom: 1em;
+    font-size: 3em;
+    color: mediumseagreen;
+}
+
+.pokedex-back {
+    font-size: 2em;
+    color: mediumseagreen;
+}
+
+.pointer {
+    text-decoration: none;
+}
+
+.pointer:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pointer:visited{
+    text-decoration: none;
+}
+
+.flex-end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
